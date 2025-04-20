@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DUSK | Checkout</title>
+  <link rel="stylesheet" href="checkout.css" />
+</head>
+<body>
+
+  <!-- Logo Header -->
+  <div class="header-container">
+    <img src="images/Logo2.png" alt="DUSK Logo" class="logo" />
+    <h1 class="brand-title">DUSK<br><span>SKIN & BODY CARE</span></h1>
+  </div>
+  
+  <!-- Checkout Form -->
+  <div class="checkout-container">
+    <h2>Checkout</h2>
+    <form id="checkoutForm">
+      <label for="product">Product</label>
+      <input type="text" id="product" name="product" readonly />
+
+      <label for="name">Full Name</label>
+      <input type="text" id="name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" required />
+
+      <label for="address">Shipping Address</label>
+      <input type="text" id="address" required />
+
+      <button type="submit">Place Order</button>
+    </form>
+  </div>
+
+  <!-- Payment Method Section -->
+  <div class="payment-methods">
+    <div class="payment-method">
+      <img src="images/credit card.png" alt="Credit Card">
+      <p>Credit Card</p>
+    </div>
+    <div class="payment-method">
+      <img src="images/Paypal.png" alt="PayPal">
+      <p>PayPal</p>
+    </div>
+  </div>
+
+  <!-- Success Page -->
+  <section id="success-page">
+    <div class="success-animation">
+      <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52" width="52" height="52">
+        <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none" stroke="#4CAF50" stroke-width="2"></circle>
+        <path class="checkmark-path" fill="none" stroke="#4CAF50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M16 26l6 6 14-14"></path>
+      </svg>
+      <h3>Success! Your order has been placed.</h3>
+      <a href="products.html" class="back-button">← Back to Products</a>
+    </div>
+  </section>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const productName = params.get('product') || 'Unknown Product';
+    document.getElementById('product').value = productName;
+
+    document.getElementById('checkoutForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      document.getElementById('success-page').style.display = 'block';
+      document.querySelector('.checkout-container').style.display = 'none';
+
+      setTimeout(function() {
+        alert(`Thanks ${name}! Your order for ${productName} has been placed successfully!`);
+      }, 3000);
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff; /* White background! */
+    color: #333; /* Black font color */
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1300px;
+    margin: auto;
+    padding: 20px 0;
+}
+
+/* Full-width header */
+header {
+    background-color:  #8B5E3C; /* SaddleBrown */
+    color: #fff;
+    padding: 15px 0;
+}
+
+/* Flex container for header content */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Poppins', sans-serif; /* Distribute logo and nav */
+    align-items: center;
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 24px; /* Adjust logo size */
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+nav a {
+    color: #fff; /* White navigation links */
+    text-decoration: none;
+    margin: 0 10px; /* Adjust spacing */
+    font-weight: 600;
+    font-size: 0.9em; /* Adjust font size */
+}
+
+nav a:first-child {
+    margin-left: 0;
+}
+
+nav a:hover {
+    color: #ddd; /* Slightly lighter white on hover */
+}
+
+.product-listing-header {
+    text-align: center;
+    margin-top: 50px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #e0e0e0; /* Light gray separator */
+}
+
+.product-listing-header h2 {
+    font-size: 2.4em;
+    margin-bottom: 10px;
+    color: #8B5E3C; /* Brown heading */
+}
+
+.product-categories {
+    padding: 20px;
+}
+
+.product-category {
+    margin-bottom: 50px;
+}
+
+.product-category h3 {
+    font-size: 1.8em;
+    color: #8B5E3C; /* Brown category title */
+    margin-bottom: 20px;
+    border-bottom: 2px solid #d4a373; /* Light brown category separator */
+    padding-bottom: 10px;
+}
+
+.product-category .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjust minmax as needed */
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 15px; /* Curvy boxes */
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Subtle shadow - consistent look */
+    border: 1px solid #e0e0e0; /* Light gray border */
+    transition: transform 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+.product-card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+
+
+.product-card h4 {
+    margin: 10px 0 8px;
+    font-size: 1.1em; /* Slightly smaller than before */
+    color: #333;
+}
+.product-card img {
+    width: 100%;
+    height: 500px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9; /* Optional: light background behind transparent areas */
+}
+
+.product-card p {
+    margin-bottom: 15px;
+    color: #8B5E3C; /* Darker brown price */
+    font-size: 0.95em; /* Slightly smaller price */
+}
+
+.view-details-button {
+    display: inline-block;
+    padding: 10px 20px; /* Slightly smaller button */
+    background-color: #a0522d; /* Brown button */
+    color: #fff; /* White text */
+    border: none;
+    border-radius: 8px; /* Curvy buttons */
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.9em; /* Smaller button text */
+    transition: background-color 0.3s ease;
+}
+
+.view-details-button:hover {
+    background-color: #704214; /* Darker brown on hover */
+}
+.buy {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #a0522d; /* Green for Buy */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.9em;
+    margin-left: 10px; /* Some spacing from View Details */
+    transition: background-color 0.3s ease;
+}
+
+.buy:hover {
+    background-color: #704214; /* Darker green on hover */
+}
+
+
+footer {
+    background-color: #8B5E3C; /* Consistent brown footer color */
+    color: #f0f0f0; /* Light text */
+    text-align: center;
+    padding: 25px 0;
+    font-size: 0.9em;
+    margin-top: 60px;
+}
