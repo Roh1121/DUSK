@@ -13,7 +13,7 @@ DUSK is a modern, elegant beauty platform built using pure HTML, CSS, and JavaSc
 
 ## 🖼️ Screenshot
 
-![DUSK Homepage]()
+![DUSK Homepage](images/Homepage.jpg)
 
 ## 🛠️ Tech Stack
 
@@ -34,7 +34,7 @@ No additional setup required — it's a static website.
 
 ## 📹 Demo Video
 
-If you'd like to preview the experience, check out the [screen recording]() included in the repo.
+If you'd like to preview the experience, check out the [screen recording](images/Sample) included in the repo.
 
 ## 📌 Future Enhancements
 
